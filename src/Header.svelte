@@ -53,7 +53,7 @@
     flex-direction: column;
     align-items: center;
     height: 200px;
-    background-color: rgba(30, 32, 37);
+    background-color: var(--brand-color);
   }
   img {
     margin-top: 40px;

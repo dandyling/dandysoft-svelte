@@ -1,32 +1,33 @@
 <script lang="ts">
+  import Gallery from "./Gallery.svelte";
   import Header from "./Header.svelte";
-  export let name: string;
+  import Section from "./Section.svelte";
 </script>
 
 <Header />
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
+  <Section bgColor="var(--secondary-color)">
+    <img
+      alt="Startup Team"
+      src="https://static.wixstatic.com/media/b3528631d4da4b0ab7a0b03f94ae070c.jpg/v1/fill/w_1410,h_660,al_c,q_85,usm_0.66_1.00_0.01/Startup%20Team.webp"
+    />
+    <h1>Welcome to DandySoft</h1>
+  </Section>
+  <Gallery />
 </main>
 
 <style>
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
   h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
+    color: var(--accent-color);
+    font: var(--font);
+    line-height: 1.25em;
+    margin-bottom: 0px;
+    margin-top: 40px;
   }
-
+  img {
+    width: var(--break-lg);
+    object-fit: cover;
+  }
   @media (min-width: 640px) {
     main {
       max-width: none;
